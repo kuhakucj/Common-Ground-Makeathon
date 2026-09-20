@@ -51,7 +51,7 @@ assets/admin.js     organiser console: edits the record
 {
   "event": {
     "name": "Common Ground", "edition": "...", "tagline": "...",
-    "dates": "...", "venue": "...", "capacity": "...", "heroNote": "...",
+    "dates": "...", "venue": "...", "hours": "...", "heroNote": "...",
     "intro":    [{ "title": "", "body": "" }],
     "schedule": [{ "time": "", "title": "", "detail": "" }],
     "faq":      [{ "q": "", "a": "" }]
@@ -126,3 +126,6 @@ The builder page includes section links, a primary token shortcut, an event summ
 and responsive information and credit cards. The organiser console groups its controls in a
 sidebar on desktop and wrapping navigation on mobile. Keyboard users have skip links,
 visible focus outlines, and a visible email label. Reduced-motion preferences disable smooth scrolling.
+
+
+Event: Sunday, 11 October 2026, 9am–5pm at SQ Collective. The one-day programme runs from check-in and kick-off through build sessions, lunch, demos, and a 5pm close.
