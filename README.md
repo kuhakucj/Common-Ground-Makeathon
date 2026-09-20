@@ -9,10 +9,10 @@ Wireframe for the **Common Ground** makeathon portal. Two pages, no build step, 
 
 ## Run it
 
-No install, no bundler. Serve the folder:
+No install, no bundler. From the repository folder, run:
 
 ```bash
-python3 -m http.server 5180 --directory Portal
+python3 -m http.server 5180
 ```
 
 Then open <http://localhost:5180/index.html>. Opening the files directly with `file://` mostly works too, but a
@@ -113,3 +113,16 @@ CSS uses 700 wherever a heavy weight is wanted. Fonts load via `<link>` with `pr
 head rather than a CSS `@import`, so they do not block the first render.
 Dark panels mark the parts that belong to *you* (your token, your codes); everything on cream is public
 event information.
+
+
+### Layout references
+
+The layout uses Mobbin references for hierarchy and spacing while retaining the Common Ground palette:
+
+- [Bonsai project overview](https://mobbin.com/screens/5ac492a4-c466-4a97-9adc-0c7341c4e123): grouped navigation and distinct content surfaces.
+- [Squarespace project workspace](https://mobbin.com/screens/7e8ff03d-16ac-4efc-a8d9-06e2005d9f63): generous spacing, restrained borders, and a readable sidebar.
+
+The builder page includes section links, a primary token shortcut, an event summary card,
+and responsive information and credit cards. The organiser console groups its controls in a
+sidebar on desktop and wrapping navigation on mobile. Keyboard users have skip links,
+visible focus outlines, and a visible email label. Reduced-motion preferences disable smooth scrolling.
