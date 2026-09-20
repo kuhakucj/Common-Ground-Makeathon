@@ -29,7 +29,7 @@
     $('hero-tagline').textContent = e.tagline;
     $('meta-dates').textContent = e.dates;
     $('meta-venue').textContent = e.venue;
-    $('meta-capacity').textContent = e.capacity;
+    $('meta-hours').textContent = e.hours;
     $('meta-note').textContent = e.heroNote;
     $('foot-dates').textContent = e.dates;
     $('top-caption').textContent = 'BUILDER PORTAL / ' + e.edition;
