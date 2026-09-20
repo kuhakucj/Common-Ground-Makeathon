@@ -109,7 +109,7 @@
 
     var result = $('result');
     result.classList.add('visible');
-    result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    result.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
   }
 
   $('gate-form').addEventListener('submit', function (ev) {
