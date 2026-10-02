@@ -129,3 +129,9 @@ visible focus outlines, and a visible email label. Reduced-motion preferences di
 
 
 Event: Sunday, 11 October 2026, 9am–5pm at SQ Collective. The one-day programme runs from check-in and kick-off through build sessions, lunch, demos, and a 5pm close.
+
+## Code release and team drafts
+
+In the organiser console, Event details → Codes available from defaults to 10 October 2026 at midnight WIB (Asia/Jakarta). A blank date enables immediate access in the current browser. Confirmed builders see tokens and redeemable codes on or after this date; waiting-list entries remain ineligible. This is a client-side prototype gate, not secure embargo enforcement: sample codes are included in the source. Real codes require an authenticated server with server-side release checks.
+
+Once a confirmed builder has a token and every configured tool code, the team section appears below the credits. The builder is the team contact; they can save a team name and add/remove teammates with names and unique email addresses. Drafts are stored separately per contact in localStorage (`cg-team-draft-v1:<email>`), survive reloads, and are not sent to organisers or included in the organiser JSON export. Central collection requires a backend or submission service. Changing the release date in the organiser console affects only that browser; publish the seed setting to change it for everyone.
