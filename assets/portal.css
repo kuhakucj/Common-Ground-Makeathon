@@ -336,3 +336,14 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 }
 @media(max-width:360px){.topbar{padding:0 14px}.brand{font-size:13px}.top-link{font-size:9px}.portal-nav{gap:20px}.tool-labels{gap:4px}.tool-labels span{padding:3px 6px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+[hidden]{display:none!important}
+.release-notice{padding:20px 24px;margin:0;background:#edf1d9;border:1px solid var(--line);font-size:14px;line-height:1.7}
+.team-section{margin-top:32px;padding:32px;background:#fffefa;border:1px solid var(--line);border-radius:14px}
+.team-section h2{font-size:30px;margin:12px 0}
+.team-section p{line-height:1.7}
+#team-form{margin-top:24px;max-width:780px}
+.team-member{min-width:0;border:1px solid var(--line);border-radius:10px;padding:20px;margin:16px 0}
+.team-member legend{font-size:13px;padding:0 8px}
+.team-actions{margin-top:24px}
+@media(max-width:700px){.team-section{padding:22px}.team-section h2{font-size:25px}.team-member{padding:14px}}

@@ -40,7 +40,7 @@
   });
 
   /* ---------------- event fields ---------------- */
-  var EVENT_FIELDS = ['name', 'edition', 'tagline', 'dates', 'venue', 'hours', 'heroNote'];
+  var EVENT_FIELDS = ['name', 'edition', 'tagline', 'dates', 'venue', 'hours', 'codesAvailableOn', 'heroNote'];
 
   function renderEventFields() {
     EVENT_FIELDS.forEach(function (key) { $('f-' + key).value = data.event[key] || ''; });
