@@ -16,6 +16,7 @@
       dates: 'SUNDAY, 11 OCTOBER 2026',
       venue: 'SQ Collective',
       hours: '9:00 AM — 5:00 PM',
+      codesAvailableOn: '2026-10-10',
       heroNote: 'Bring a problem you actually have. Leave with something that runs.',
       intro: [
         { title: 'What this is',
@@ -88,6 +89,18 @@
 
   const CGData = {
     STORE_KEY,
+    codesOpen: function (event, now) {
+      const date = event.codesAvailableOn;
+      if (!date) return true;
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return false;
+      return (now == null ? Date.now() : now) >= Date.parse(date + 'T00:00:00+07:00');
+    },
+    releaseLabel: function (event) {
+      if (!event.codesAvailableOn) return 'Available now';
+      const date = new Date(event.codesAvailableOn + 'T00:00:00+07:00');
+      return Number.isNaN(date.getTime()) ? 'Release date to be confirmed' :
+        new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Asia/Jakarta' }).format(date) + ' · 00:00 WIB';
+    },
     seed: function () { return clone(SEED); },
 
     load: function () {
