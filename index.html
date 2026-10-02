@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="./assets/portal.css?v=20261002-team">
+<link rel="stylesheet" href="./assets/portal.css?v=20261003-project">
 </head>
 <body class="builder-page">
 <a class="skip-link" href="#main-content">Skip to content</a>
@@ -112,6 +112,25 @@
       </form>
     </section>
 
+    <section id="submission-section" class="team-section" hidden aria-labelledby="submission-title">
+      <span class="eyebrow">THEN / YOUR SUBMISSION</span>
+      <h2 id="submission-title">Show us what you made.</h2>
+      <p>Start your project draft here. Keep refining it as you build.</p>
+      <p id="submission-team" class="helper"></p>
+      <form id="submission-form" novalidate>
+        <label class="field"><span>PROJECT NAME *</span><input id="project-name" maxlength="150" required></label>
+        <label class="field"><span>WHAT DID YOU BUILD? *</span><textarea id="project-description" maxlength="5000" required placeholder="The problem, your solution, and what you learned."></textarea></label>
+        <div class="field-row">
+          <label class="field"><span>DEMO LINK</span><input id="project-demo" type="url" placeholder="https://…" maxlength="2000"></label>
+          <label class="field"><span>GITHUB / SOURCE LINK</span><input id="project-source" type="url" placeholder="https://github.com/…" maxlength="2000"></label>
+        </div>
+        <p class="helper">Add at least one project link when your draft is ready.</p>
+        <div class="team-actions"><button class="btn btn-primary" type="submit">Save project draft</button> <button class="btn" type="button" id="project-ready">Mark ready locally</button> <button class="btn" type="button" id="project-download">Download draft</button></div>
+        <p class="helper">Saved on this device only. Marking ready does not send your project to organisers. Online submission will be connected later.</p>
+        <p id="submission-feedback" class="helper" role="status"></p>
+      </form>
+    </section>
+
     <p class="wire-note">Wireframe: codes are stored in your browser only. In production this screen is served after a
       magic-link check, and each code is issued once per confirmed builder.</p>
   </section>
@@ -144,7 +163,7 @@
 
 <div id="toast" class="toast" role="status"></div>
 
-<script src="./assets/data.js?v=20261002-team"></script>
-<script src="./assets/portal.js?v=20261002-team"></script>
+<script src="./assets/data.js?v=20261003-project"></script>
+<script src="./assets/portal.js?v=20261003-project"></script>
 </body>
 </html>

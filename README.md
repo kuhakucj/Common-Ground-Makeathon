@@ -135,3 +135,10 @@ Event: Sunday, 11 October 2026, 9am–5pm at SQ Collective. The one-day programm
 In the organiser console, Event details → Codes available from defaults to 10 October 2026 at midnight WIB (Asia/Jakarta). A blank date enables immediate access in the current browser. Confirmed builders see tokens and redeemable codes on or after this date; waiting-list entries remain ineligible. This is a client-side prototype gate, not secure embargo enforcement: sample codes are included in the source. Real codes require an authenticated server with server-side release checks.
 
 Once a confirmed builder has a token and every configured tool code, the team section appears below the credits. The builder is the team contact; they can save a team name and add/remove teammates with names and unique email addresses. Drafts are stored separately per contact in localStorage (`cg-team-draft-v1:<email>`), survive reloads, and are not sent to organisers or included in the organiser JSON export. Central collection requires a backend or submission service. Changing the release date in the organiser console affects only that browser; publish the seed setting to change it for everyone.
+
+
+## Project submission base
+
+Below the team form, eligible builders can save incomplete project drafts (name, description, demo URL and source URL), mark a completed draft ready locally, and download a JSON copy. Ready requires a saved team, name, description and at least one HTTP(S) link. All controls explicitly state that nothing is sent to organisers. Editing a ready project requires saving or marking it ready again. Download saves the current form as a draft.
+
+The `projectStore` adapter in `assets/portal.js` isolates local storage (`cg-project-draft-v1:<email>`). Records contain schemaVersion, eventId, ownerEmail, status, project, a saved team snapshot and updatedAt. Replace its load/save operations with authenticated API calls later; validate identity, team membership, URLs and deadlines server-side. Drafts are not included in the organiser export.
